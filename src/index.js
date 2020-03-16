@@ -8,7 +8,14 @@ app.set('port',process.env.PORT || 3001);
 app.use(express.json());
 
 //Routes - Rutas de la aplicacion
-app.use(require('./routes/employees'));
+app.use(require('./routes/user'));
+app.use(require('./routes/teacher'));
+app.use(require('./routes/student'));
+app.use(require('./routes/class'));
+app.use(require('./routes/post'));
+app.use(require('./routes/task'));
+app.use(require('./routes/role'));
+
 
 //Start the server
 app.listen(app.get('port'), () => {
