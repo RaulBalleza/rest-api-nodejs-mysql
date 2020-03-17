@@ -14,6 +14,18 @@ router.get("/users", (req, res) => {
     });
 });
 
+//Obtener UN usuario
+router.get("/user/:id", (req, res) => {
+    //req.params contiene los campos de enviados
+    const { id } = req.params;
+    const query = `
+    CALL getUser(?);
+    `;
+    mysqlconn.query(query, [id], (err, rows, fields) => {
+        err ? console.log(err) : res.json(rows[0]);
+    });
+});
+
 //Actualizar datos de un usuario
 router.put("/user/:id", (req, res) => {
     const { id } = req.params;

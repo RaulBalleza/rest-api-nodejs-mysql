@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 //Settings - Configuracion del servidor
-app.set('port',process.env.PORT || 3001);
+app.set('port',process.env.PORT || 3000);
 
 //Middlewares - Funciones que se ejecutan antes de que se muestren las rutas
 app.use(express.json());

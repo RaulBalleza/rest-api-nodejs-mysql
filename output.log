@@ -1,0 +1,31 @@
+
+> rest-api@1.0.0 dev /var/www/html/rest-api-nodejs-mysql
+> nodemon src/index.js
+
+[33m[nodemon] 2.0.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching dir(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node src/index.js`[39m
+events.js:288
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at internal/fs/streams.js:186:12
+    at FSReqCallback.wrapper [as oncomplete] (fs.js:487:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! rest-api@1.0.0 dev: `nodemon src/index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the rest-api@1.0.0 dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2020-03-16T23_48_55_117Z-debug.log

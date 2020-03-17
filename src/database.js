@@ -1,8 +1,8 @@
 const mysql = require("mysql");
 const mysqlconn = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "balleza",
+    user: "laravel",
+    password: "laravel_saas",
     database: "classroom_test",
 });
 
