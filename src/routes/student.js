@@ -81,5 +81,16 @@ router.put("/student/:id/UnsubmitTask/:id_post", (req, res) => {
     });
 });
 
+//Inscribir estudiante en clase
+router.post("/student/:id/class", (req, res) => {
+    const { id } = req.params;
+    const { code } = req.body;
+    const query = `
+        CALL addStudentClass(?,?);
+    `;
+    mysqlconn.query(query, [id, code], (err, rows, fields) => {
+        err ? console.log(err) : res.json({ Status: 'Estudiante inscrito en la clase' });
+    });
+});
 
 module.exports = router;
